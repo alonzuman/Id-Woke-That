@@ -1,7 +1,6 @@
 import { Box, Typography, useTheme } from '@material-ui/core'
 import React from 'react'
 
-const WIDTH = 120
 
 export default function LogoURL({ fontSize = 24, color, ...rest }) {
   const { palette } = useTheme()
@@ -11,7 +10,6 @@ export default function LogoURL({ fontSize = 24, color, ...rest }) {
       <Box alignItems='flex-end' display='flex' flexDirection='column'>
         <Box
           textAlign='center'
-          width={WIDTH}
           padding={.5}
           bgcolor={palette.secondary.dark}
           alignSelf='flex-end'
@@ -29,7 +27,10 @@ export default function LogoURL({ fontSize = 24, color, ...rest }) {
         </Typography>
         </Box>
       </Box>
-      <Box textAlign='center' bgcolor='#000' width={WIDTH}>
+      <Box
+        textAlign='center'
+        bgcolor='#000'
+      >
         <Typography
           variant='body1'
           style={{
