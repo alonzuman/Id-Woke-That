@@ -1,0 +1,99 @@
+[debug] [2021-05-17T21:22:07.963Z] ----------------------------------------------------------------------
+[debug] [2021-05-17T21:22:07.965Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting
+[debug] [2021-05-17T21:22:07.965Z] CLI Version:   9.10.2
+[debug] [2021-05-17T21:22:07.966Z] Platform:      darwin
+[debug] [2021-05-17T21:22:07.966Z] Node Version:  v14.15.5
+[debug] [2021-05-17T21:22:07.967Z] Time:          Tue May 18 2021 00:22:07 GMT+0300 (Israel Daylight Time)
+[debug] [2021-05-17T21:22:07.967Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-05-17T21:22:07.979Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-05-17T21:22:07.980Z] > authorizing via signed-in user (alonzuman7@gmail.com)
+[debug] [2021-05-17T21:22:07.980Z] [iam] checking project idwokethat for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-05-17T21:22:07.981Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/idwokethat:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-05-17T21:22:09.306Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 17 May 2021 21:22:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=123","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-17T21:22:09.310Z] > refreshing access token with scopes: []
+[debug] [2021-05-17T21:22:09.310Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-17T21:22:10.845Z] <<< HTTP RESPONSE 200 {"date":"Mon, 17 May 2021 21:22:10 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-17T21:22:10.911Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/idwokethat [none]
+[debug] [2021-05-17T21:22:13.235Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/idwokethat 200
+[debug] [2021-05-17T21:22:13.236Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/idwokethat {"projectId":"idwokethat","projectNumber":"932232412332","displayName":"idwokethat","name":"projects/idwokethat","resources":{"hostingSite":"idwokethat","storageBucket":"idwokethat.appspot.com","locationId":"europe-west"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'idwokethat'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-05-17T21:22:13.243Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-05-17T21:22:13.244Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-17T21:22:14.186Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Mon, 17 May 2021 21:22:14 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-17T21:22:14.246Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/idwokethat/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-05-17T21:22:17.201Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 17 May 2021 21:22:16 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[idwokethat]: beginning deploy... 
+[info] i  hosting[idwokethat]: found 18 files in build 
+[debug] [2021-05-17T21:22:17.834Z] > refreshing access token with scopes: []
+[debug] [2021-05-17T21:22:17.835Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-17T21:22:17.836Z] [hosting] hash cache [YnVpbGQ] stored for 18 files
+[debug] [2021-05-17T21:22:17.836Z] [hosting][hash queue][FINAL] {"max":610,"min":12,"avg":51.27777777777778,"active":0,"complete":18,"success":18,"errored":0,"retried":0,"total":18,"elapsed":615}
+[debug] [2021-05-17T21:22:20.763Z] <<< HTTP RESPONSE 200 {"date":"Mon, 17 May 2021 21:22:20 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-17T21:22:20.826Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/idwokethat/versions/d07a0a737950ce6b:populateFiles [none]
+[debug] [2021-05-17T21:22:20.826Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/idwokethat/versions/d07a0a737950ce6b:populateFiles {"files":{"/asset-manifest.json":"18b89ceaa83a73e4f541b3c4a159223d188a7fda7568b60e39e06e74c046214b","/favicon.ico":"ae8feb5ef29377ebf1743327a8e258ebc03e989d68c803932e4df06e6016a0d8","/index.html":"5fcad5543d66022bacaad4574974fd2875db07971318c805a8e1b064a8bd7153","/manifest.json":"4bf5a4336b1a9cd1e073b3ae9bb85a40d6086b78d3c4ebb8dadc9656cb7d107a","/static/css/main.b2182ca5.chunk.css":"60b5c6bf2c580902979b0bdbbceca711e4452087755d307029e444cffcd81546","/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/static/css/main.b2182ca5.chunk.css.map":"d1add176e0405e1dfe90707d060dc4d260e83d956d9eb95fc7bd1c27301943ce","/static/js/2.48f7354b.chunk.js.LICENSE.txt":"d4fa7a3e816681bc83774eafdb6ff1438f299f95077a608dbe022efd31dd1079","/static/js/3.07d2cdea.chunk.js":"c952ee20c7fe3f13e1ed3c031ffd2d32c72afd792dbb291351d778ff7532f43e","/static/js/3.07d2cdea.chunk.js.map":"e3cab8c88fb90cf1acc2405fcd0388b1eb338997460df0d020416617b03b2752","/static/js/main.06883b13.chunk.js":"012a06a3bf63851a4aa45013483d6283fb2fe12b203087a4dd6c6146ac1d9e57","/static/js/runtime-main.5c8c4012.js":"4a96c7e290a6d9f961ff4699c485b5c5a43965fb67b51070c64390e72407fc99","/static/js/runtime-main.5c8c4012.js.map":"b52586ade4942e5b1bfc2b53d2759a54ab28b912054799ab8fbadc811622e639","/static/js/main.06883b13.chunk.js.map":"0492b4b074d52a3938c85d5f253c8604996de73d7c820673bfc337f217fbb7a9","/logo192.png":"8590daaac3b7b7f589c63ecd96e5f804010cfca6e6371027814b35b827fe0bc5","/logo512.png":"8590daaac3b7b7f589c63ecd96e5f804010cfca6e6371027814b35b827fe0bc5","/static/js/2.48f7354b.chunk.js":"5afd8154478743538495e8fed04fee6ab4e174fb56eaeb61ea0f29b9dd5aa7d5","/static/js/2.48f7354b.chunk.js.map":"ed37e33db310d1ca4350bd827cfdff3ebb2a55c4dff0957b4e7aae9970aa37c5"}}
+[debug] [2021-05-17T21:22:22.475Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/idwokethat/versions/d07a0a737950ce6b:populateFiles 200
+[debug] [2021-05-17T21:22:22.475Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/idwokethat/versions/d07a0a737950ce6b:populateFiles {"uploadRequiredHashes":["18b89ceaa83a73e4f541b3c4a159223d188a7fda7568b60e39e06e74c046214b","0492b4b074d52a3938c85d5f253c8604996de73d7c820673bfc337f217fbb7a9","012a06a3bf63851a4aa45013483d6283fb2fe12b203087a4dd6c6146ac1d9e57","5fcad5543d66022bacaad4574974fd2875db07971318c805a8e1b064a8bd7153"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files"}
+[debug] [2021-05-17T21:22:22.479Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/18b89ceaa83a73e4f541b3c4a159223d188a7fda7568b60e39e06e74c046214b [none]
+[debug] [2021-05-17T21:22:22.479Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/18b89ceaa83a73e4f541b3c4a159223d188a7fda7568b60e39e06e74c046214b [stream]
+[debug] [2021-05-17T21:22:22.481Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/0492b4b074d52a3938c85d5f253c8604996de73d7c820673bfc337f217fbb7a9 [none]
+[debug] [2021-05-17T21:22:22.481Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/0492b4b074d52a3938c85d5f253c8604996de73d7c820673bfc337f217fbb7a9 [stream]
+[debug] [2021-05-17T21:22:22.483Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/012a06a3bf63851a4aa45013483d6283fb2fe12b203087a4dd6c6146ac1d9e57 [none]
+[debug] [2021-05-17T21:22:22.483Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/012a06a3bf63851a4aa45013483d6283fb2fe12b203087a4dd6c6146ac1d9e57 [stream]
+[debug] [2021-05-17T21:22:22.485Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/5fcad5543d66022bacaad4574974fd2875db07971318c805a8e1b064a8bd7153 [none]
+[debug] [2021-05-17T21:22:22.485Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/5fcad5543d66022bacaad4574974fd2875db07971318c805a8e1b064a8bd7153 [stream]
+[debug] [2021-05-17T21:22:22.487Z] [hosting][populate queue][FINAL] {"max":4645,"min":4645,"avg":4645,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":4653}
+[debug] [2021-05-17T21:22:22.487Z] [hosting] uploads queued: 4
+[debug] [2021-05-17T21:22:24.196Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/012a06a3bf63851a4aa45013483d6283fb2fe12b203087a4dd6c6146ac1d9e57 200
+[debug] [2021-05-17T21:22:24.197Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/012a06a3bf63851a4aa45013483d6283fb2fe12b203087a4dd6c6146ac1d9e57 [stream]
+[debug] [2021-05-17T21:22:24.500Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/5fcad5543d66022bacaad4574974fd2875db07971318c805a8e1b064a8bd7153 200
+[debug] [2021-05-17T21:22:24.500Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/5fcad5543d66022bacaad4574974fd2875db07971318c805a8e1b064a8bd7153 [stream]
+[debug] [2021-05-17T21:22:24.946Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/0492b4b074d52a3938c85d5f253c8604996de73d7c820673bfc337f217fbb7a9 200
+[debug] [2021-05-17T21:22:24.947Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/0492b4b074d52a3938c85d5f253c8604996de73d7c820673bfc337f217fbb7a9 [stream]
+[debug] [2021-05-17T21:22:25.092Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/18b89ceaa83a73e4f541b3c4a159223d188a7fda7568b60e39e06e74c046214b 200
+[debug] [2021-05-17T21:22:25.092Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/idwokethat/versions/d07a0a737950ce6b/files/18b89ceaa83a73e4f541b3c4a159223d188a7fda7568b60e39e06e74c046214b [stream]
+[debug] [2021-05-17T21:22:25.093Z] [hosting][upload queue][FINAL] {"max":2616,"min":1719,"avg":2206.75,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":2617}
+[info] ✔  hosting[idwokethat]: file upload complete 
+[debug] [2021-05-17T21:22:25.094Z] [hosting] deploy completed after 7891ms
+[debug] [2021-05-17T21:22:27.808Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "idwokethat"
+    },
+    "site": "idwokethat",
+    "version": "sites/idwokethat/versions/d07a0a737950ce6b"
+  }
+]
+[info] i  hosting[idwokethat]: finalizing version... 
+[debug] [2021-05-17T21:22:27.810Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-05-17T21:22:27.810Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-05-17T21:22:30.347Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Mon, 17 May 2021 21:22:29 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-17T21:22:30.405Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/idwokethat/versions/d07a0a737950ce6b?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2021-05-17T21:22:33.253Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 17 May 2021 21:22:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-05-17T21:22:33.253Z] [hosting] finalized version for idwokethat: {"name":"sites/idwokethat/versions/d07a0a737950ce6b","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2021-05-17T21:22:16.054598Z","createUser":{"email":"alonzuman7@gmail.com"},"finalizeTime":"2021-05-17T21:22:33.037996Z","finalizeUser":{"email":"alonzuman7@gmail.com"}}
+[info] ✔  hosting[idwokethat]: version finalized 
+[info] i  hosting[idwokethat]: releasing new version... 
+[debug] [2021-05-17T21:22:33.254Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/idwokethat/releases?version_name=sites/idwokethat/versions/d07a0a737950ce6b  
+ {"message":null}

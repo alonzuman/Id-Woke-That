@@ -7,7 +7,7 @@ import Logo from './Logo';
 import WaterMark from './WaterMark';
 import useIncrementPosts from '../hooks/useIncrementPosts'
 
-const TEXT = 'Wanna look as woke as all your friends on social media? It’s easy! Just upload and photo and we’ll give you that perfect caption, making you look as PC as can be ✌️'
+const TEXT = 'Wanna look as woke as all your friends on social media? It’s easy! Just upload a photo and we’ll give you that perfect caption, making you look as PC as can be ✌️'
 
 export default function ImageUploader() {
   const { spacing } = useTheme()
