@@ -80,7 +80,7 @@ export default function ImageUploader() {
         <Logo fontSize={32} mb={1} />
         {!state.downloadURL && <Typography style={{ marginTop: spacing(2) }}>Reprehenderit est proident qui velit ipsum. Nisi consequat ex nostrud minim Lorem et ea mollit velit laboris qui nisi. Ullamco veniam adipisicing consectetur Lorem cupidatat sint culpa. Occaecat qui in eu duis aute qui.</Typography>}
       </Box>
-      <Box position='sticky' top={0} width='100%' padding={2} display='flex' flexDirection='column' alignItems='center' flex={4}>
+      <Box width='100%' padding={2} display='flex' flexDirection='column' alignItems='center' flex={4}>
         <Box height='100%' width='100%' maxWidth={512} position='relative'>
           {state.downloadURL && (
             <img
