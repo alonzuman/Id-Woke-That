@@ -51,5 +51,6 @@ export default [
   `Self love.`,
   `Listen to your body`,
   `I do it for me.`,
-  `LOVE TRUMPS HATE!`
+  `LOVE TRUMPS HATE!`,
+  `Skolstrejk för klimatet`
 ]
