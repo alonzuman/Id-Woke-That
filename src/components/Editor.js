@@ -124,7 +124,7 @@ export default function ImageUploader() {
             startIcon={<ImageIcon size={24} />}
             onClick={() => inputRef?.current?.click()}
           >
-            {isUploading ? 'Uploading' : state.imageURL ? 'Choose a different photo' : 'Upload'}
+            {isUploading ? 'Uploading' : state.imageURL ? 'Choose a different photo' : 'Upload a photo'}
             {' '}
             {isUploading && `${state.progress}%`}
           </Button>
