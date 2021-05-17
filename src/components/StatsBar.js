@@ -12,7 +12,7 @@ export default function StatsBar() {
       <Grid justify='center' container spacing={1}>
         <Grid item>
           <Chip
-            label={<Typography>{viewes.users?.length} 👀</Typography>}
+            label={<Typography>{viewes} 👀</Typography>}
           />
         </Grid>
         <Grid item>

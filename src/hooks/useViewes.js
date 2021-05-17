@@ -6,7 +6,7 @@ export default function useViewes() {
 
   useEffect(() => {
     db.collection('stats').doc('viewes').onSnapshot(snapshot => {
-      setViewes(snapshot.data())
+      setViewes(snapshot.data().count)
     })
   }, [])
 

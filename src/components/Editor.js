@@ -7,6 +7,8 @@ import Logo from './Logo';
 import WaterMark from './WaterMark';
 import useIncrementPosts from '../hooks/useIncrementPosts'
 
+const TEXT = 'Wanna look as woke as all your friends on social media? It’s easy! Just upload and photo and we’ll give you that perfect caption, making you look as PC as can be ✌️'
+
 export default function ImageUploader() {
   const { spacing } = useTheme()
   const [state, setState] = useState({
@@ -52,7 +54,7 @@ export default function ImageUploader() {
     <>
       <Box textAlign='center' mt={2}>
         <Logo fontSize={32} mb={1} mt={2} />
-        {!state.imageURL && <Typography style={{ marginTop: spacing(2) }}>Reprehenderit est proident qui velit ipsum. Nisi consequat ex nostrud minim Lorem et ea mollit velit laboris qui nisi. Ullamco veniam adipisicing consectetur Lorem cupidatat sint culpa. Occaecat qui in eu duis aute qui.</Typography>}
+        {!state.imageURL && <Typography style={{ marginTop: spacing(2) }}>{TEXT}</Typography>}
       </Box>
       <Box width='100%' padding={2} display='flex' flexDirection='column' alignItems='center' flex={4}>
         <Box height='100%' width='100%' maxWidth={512} position='relative'>

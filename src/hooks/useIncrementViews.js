@@ -3,12 +3,12 @@ import { useMutation } from 'react-query'
 import { db } from '../firebase'
 import firebase from 'firebase'
 
-const incrementViewes = async (userID) => {
+const incrementViewes = async () => {
   await db
     .collection('stats')
     .doc('viewes')
     .update({
-      users: firebase.firestore.FieldValue.arrayUnion(userID)
+      count: firebase.firestore.FieldValue.increment(1)
     })
 }
 

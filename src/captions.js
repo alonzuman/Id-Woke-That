@@ -35,5 +35,11 @@ export default [
   `Go Green`,
   `Love animals, eat plants.`,
   `#forthekids`,
-  `If you woke up without a goal, go back to sleep.`
+  `If you woke up without a goal, go back to sleep.`,
+  `VOTE.`,
+  `Resisting bitch face`,
+  `Fight like a girl!`,
+  `Make america think again.`,
+  `Like, follow, subscribe`,
+  `Pussy grabs back.`
 ]
