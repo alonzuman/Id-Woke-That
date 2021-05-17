@@ -13,5 +13,13 @@ export default [
   `HOPE`,
   `Not me. Us.`,
   `I am once again asking for your financial support.`,
-  `Social justice warrior.`
+  `Social justice warrior.`,
+  `Woke AF.`,
+  `#staywoke`,
+  `Love is Love.`,
+  `Nasty woman.`,
+  `Respect our existence or expect our resistance.`,
+  `Girl power!`,
+  `The future is female.`,
+  `Making herstory.`
 ]

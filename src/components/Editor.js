@@ -1,68 +1,42 @@
-import { Box, Button, Grid, Typography, useTheme } from '@material-ui/core'
+import { Box, Button, Typography, useTheme } from '@material-ui/core'
 import React, { useEffect, useRef, useState } from 'react'
-import { db, storage } from '../firebase'
-import { v4 as uuid } from 'uuid';
 import RefreshIcon from '@material-ui/icons/Refresh';
 import ImageIcon from '@material-ui/icons/Image';
 import captions from '../captions';
 import Logo from './Logo';
 import WaterMark from './WaterMark';
-import useCreatePost from '../hooks/useCreatePost';
+import useIncrementPosts from '../hooks/useIncrementPosts'
 
-const imageID = uuid();
 export default function ImageUploader() {
   const { spacing } = useTheme()
   const [state, setState] = useState({
     progress: 0,
-    downloadURL: '',
+    imageURL: '',
     caption: ''
   })
   const inputRef = useRef(null)
-  const taskRef = storage.ref(`/images/${imageID}`)
   const isUploading = state.progress !== 0 && state.progress !== 100
-  const { createPost } = useCreatePost()
+  const { increment: incrementPosts } = useIncrementPosts()
 
   const handleChange = e => {
     const file = e.target.files[0];
-    const task = taskRef.put(file)
+    const newImageURL = URL.createObjectURL(file)
 
-    task.on('state_changed', handleStateChange, handleError, handleCompletion)
-  }
-
-  const handleStateChange = s => {
-    const progress = Math.round((s.bytesTransferred / s.totalBytes) * 100);
+    wokeThat()
     setState(s => {
       return {
         ...s,
-        progress
+        imageURL: newImageURL
       }
     })
   }
 
-  const handleError = e => console.log(e)
-
   useEffect(() => {
     if (state.caption) {
-      createPost({
-        imageURL: state.downloadURL,
-        caption: state.caption
-      })
+      incrementPosts()
     }
 
   }, [state.caption, state.imageURL])
-
-  const handleCompletion = () => {
-    taskRef.getDownloadURL()
-      .then(v => {
-        wokeThat()
-        setState(s => {
-          return {
-            ...s,
-            downloadURL: v
-          }
-        })
-      })
-  }
 
   const wokeThat = () => {
     const cap = getWokeCaption()
@@ -78,13 +52,13 @@ export default function ImageUploader() {
     <>
       <Box textAlign='center' mt={2}>
         <Logo fontSize={32} mb={1} />
-        {!state.downloadURL && <Typography style={{ marginTop: spacing(2) }}>Reprehenderit est proident qui velit ipsum. Nisi consequat ex nostrud minim Lorem et ea mollit velit laboris qui nisi. Ullamco veniam adipisicing consectetur Lorem cupidatat sint culpa. Occaecat qui in eu duis aute qui.</Typography>}
+        {!state.imageURL && <Typography style={{ marginTop: spacing(2) }}>Reprehenderit est proident qui velit ipsum. Nisi consequat ex nostrud minim Lorem et ea mollit velit laboris qui nisi. Ullamco veniam adipisicing consectetur Lorem cupidatat sint culpa. Occaecat qui in eu duis aute qui.</Typography>}
       </Box>
       <Box width='100%' padding={2} display='flex' flexDirection='column' alignItems='center' flex={4}>
         <Box height='100%' width='100%' maxWidth={512} position='relative'>
-          {state.downloadURL && (
+          {state.imageURL && (
             <img
-              src={state.downloadURL}
+              src={state.imageURL}
               style={{
                 objectFit: 'contain',
                 height: '100%',
@@ -93,7 +67,7 @@ export default function ImageUploader() {
               }}
             />
           )}
-          {state.downloadURL && (
+          {state.imageURL && (
             <Box
               position='absolute'
               top={0}
@@ -125,7 +99,7 @@ export default function ImageUploader() {
           )}
         </Box>
         <Box maxWidth={320} padding={2} width='100%'>
-          {state.downloadURL && (
+          {state.imageURL && (
             <Button
               fullWidth
               variant='contained'
@@ -147,7 +121,7 @@ export default function ImageUploader() {
             startIcon={<ImageIcon size={24} />}
             onClick={() => inputRef?.current?.click()}
           >
-            {isUploading ? 'Uploading' : state.downloadURL ? 'Choose a different photo' : 'Upload'}
+            {isUploading ? 'Uploading' : state.imageURL ? 'Choose a different photo' : 'Upload'}
             {' '}
             {isUploading && `${state.progress}%`}
           </Button>

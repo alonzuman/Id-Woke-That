@@ -12,7 +12,7 @@ export default function Logo({ fontSize = 24, color, ...rest }) {
         }}
         variant='h1'
       >
-        #idwokethat✌️
+        #idwokethat✊
     </Typography>
     </Box>
   )

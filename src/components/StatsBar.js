@@ -9,7 +9,7 @@ export default function StatsBar() {
 
   return (
     <Box width='100%' padding={2} display='flex' alignItems='center' justifyContent='center'>
-      <Grid container spacing={1}>
+      <Grid justify='center' container spacing={1}>
         <Grid item>
           <Chip
             label={<Typography>{viewes.users?.length} 👀</Typography>}
