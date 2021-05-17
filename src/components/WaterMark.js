@@ -1,5 +1,6 @@
 import { Box, Typography, useTheme } from '@material-ui/core'
 import React from 'react'
+import Logo from './Logo'
 
 export default function WaterMark() {
   const { palette, spacing } = useTheme()
@@ -12,12 +13,10 @@ export default function WaterMark() {
       padding={.5}
       bgcolor={palette.secondary.dark}
     >
-      <Typography
-        variant='h3'
+      <Logo
+        fontSize={16}
         style={{ color: palette.secondary.contrastText }}
-      >
-        #idwokethat✌️
-      </Typography>
+      />
     </Box>
   )
 }

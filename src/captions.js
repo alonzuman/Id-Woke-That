@@ -12,5 +12,6 @@ export default [
   `I Dissent.`,
   `HOPE`,
   `Not me. Us.`,
-  `I am once again asking for your financial support.`
+  `I am once again asking for your financial support.`,
+  `Social justice warrior.`
 ]
