@@ -1,24 +1,19 @@
-import { Container, ThemeProvider, createMuiTheme } from '@material-ui/core';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core';
 import './App.css';
-import Editor from './components/Editor';
 import theme from './theme';
+import { QueryClient, QueryClientProvider } from 'react-query'
+import Main from './components/Main';
 
+const queryClient = new QueryClient()
 const customTheme = createMuiTheme(theme)
 
 function App() {
   return (
-    <ThemeProvider theme={customTheme}>
-      <Container
-        maxWidth='lg'
-        style={{
-          minHeight: window.innerHeight,
-          display: 'flex',
-          alignItems: 'center',
-          flexDirection: 'column',
-        }}>
-        <Editor />
-      </Container>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={customTheme}>
+        <Main />
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 }
 

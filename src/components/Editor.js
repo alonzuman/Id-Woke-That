@@ -1,5 +1,5 @@
 import { Box, Button, Grid, Typography, useTheme } from '@material-ui/core'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { db, storage } from '../firebase'
 import { v4 as uuid } from 'uuid';
 import RefreshIcon from '@material-ui/icons/Refresh';
@@ -7,6 +7,7 @@ import ImageIcon from '@material-ui/icons/Image';
 import captions from '../captions';
 import Logo from './Logo';
 import WaterMark from './WaterMark';
+import useCreatePost from '../hooks/useCreatePost';
 
 const imageID = uuid();
 export default function ImageUploader() {
@@ -19,6 +20,7 @@ export default function ImageUploader() {
   const inputRef = useRef(null)
   const taskRef = storage.ref(`/images/${imageID}`)
   const isUploading = state.progress !== 0 && state.progress !== 100
+  const { createPost } = useCreatePost()
 
   const handleChange = e => {
     const file = e.target.files[0];
@@ -39,21 +41,27 @@ export default function ImageUploader() {
 
   const handleError = e => console.log(e)
 
-  const handleCompletion = () => {
-    taskRef.getDownloadURL().then(v => setState(s => {
-      db.collection('posts').add({
-        imageURL: v,
-        caption: state.caption,
-        createdAt: Date.now()
+  useEffect(() => {
+    if (state.caption) {
+      createPost({
+        imageURL: state.downloadURL,
+        caption: state.caption
       })
-        .then(() => wokeThat())
-        .catch(e => console.log(e))
+    }
 
-      return {
-        ...s,
-        downloadURL: v
-      }
-    }))
+  }, [state.caption, state.imageURL])
+
+  const handleCompletion = () => {
+    taskRef.getDownloadURL()
+      .then(v => {
+        wokeThat()
+        setState(s => {
+          return {
+            ...s,
+            downloadURL: v
+          }
+        })
+      })
   }
 
   const wokeThat = () => {
