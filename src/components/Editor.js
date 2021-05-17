@@ -78,7 +78,6 @@ export default function ImageUploader() {
             <img
               src={state.downloadURL}
               style={{
-                filter: 'blur(1px)',
                 objectFit: 'contain',
                 height: '100%',
                 width: '100%',

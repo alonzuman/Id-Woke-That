@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from '@material-ui/core'
+import { Box, useTheme } from '@material-ui/core'
 import React from 'react'
 import Logo from './Logo'
 
