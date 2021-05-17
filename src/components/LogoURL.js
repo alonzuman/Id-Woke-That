@@ -1,7 +1,7 @@
 import { Box, Typography } from '@material-ui/core'
 import React from 'react'
 
-export default function Logo({ fontSize = 24, color, ...rest }) {
+export default function LogoURL({ fontSize = 24, color, ...rest }) {
   return (
     <Box {...rest}>
       <Typography
@@ -12,7 +12,7 @@ export default function Logo({ fontSize = 24, color, ...rest }) {
         }}
         variant='h1'
       >
-        #idwokethat✊
+        #idwokethat.web.app✊
     </Typography>
     </Box>
   )

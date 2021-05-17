@@ -1,6 +1,6 @@
 import { Box, useTheme } from '@material-ui/core'
 import React from 'react'
-import Logo from './Logo'
+import LogoURL from './LogoURL'
 
 export default function WaterMark() {
   const { palette, spacing } = useTheme()
@@ -13,7 +13,7 @@ export default function WaterMark() {
       padding={.5}
       bgcolor={palette.secondary.dark}
     >
-      <Logo
+      <LogoURL
         fontSize={16}
         style={{ color: palette.secondary.contrastText }}
       />
