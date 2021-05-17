@@ -8,7 +8,7 @@ export default function StatsBar() {
   const { posts } = usePostsCount()
 
   return (
-    <Box padding={2} display='flex' alignItems='center' justifyContent='center'>
+    <Box width='100%' padding={2} display='flex' alignItems='center' justifyContent='center'>
       <Grid container spacing={1}>
         <Grid item>
           <Chip
