@@ -21,5 +21,19 @@ export default [
   `Respect our existence or expect our resistance.`,
   `Girl power!`,
   `The future is female.`,
-  `Making herstory.`
+  `Making herstory.`,
+  `Nevertheless, she persisted.`,
+  `[insert woke caption]`,
+  `Save the turtles`,
+  `If not know, then when?`,
+  `She believed she could, so she did.`,
+  `Social justice warrior.`,
+  `Women supporting women.`,
+  `Stop the war.`,
+  `Every day is earth day.`,
+  `Reuse. Reduce. Recycle.`,
+  `Go Green`,
+  `Love animals, eat plants.`,
+  `#forthekids`,
+  `If you woke up without a goal, go back to sleep.`
 ]

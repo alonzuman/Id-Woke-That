@@ -51,7 +51,7 @@ export default function ImageUploader() {
   return (
     <>
       <Box textAlign='center' mt={2}>
-        <Logo fontSize={32} mb={1} />
+        <Logo fontSize={32} mb={1} mt={2} />
         {!state.imageURL && <Typography style={{ marginTop: spacing(2) }}>Reprehenderit est proident qui velit ipsum. Nisi consequat ex nostrud minim Lorem et ea mollit velit laboris qui nisi. Ullamco veniam adipisicing consectetur Lorem cupidatat sint culpa. Occaecat qui in eu duis aute qui.</Typography>}
       </Box>
       <Box width='100%' padding={2} display='flex' flexDirection='column' alignItems='center' flex={4}>
@@ -63,7 +63,6 @@ export default function ImageUploader() {
                 objectFit: 'contain',
                 height: '100%',
                 width: '100%',
-                maxHeight: 512
               }}
             />
           )}
@@ -79,9 +78,11 @@ export default function ImageUploader() {
               <WaterMark />
               <Typography
                 style={{
-                  textShadow: '0px 0px 10px #00000099',
+                  textTransform: 'uppercase',
+                  textShadow: '0px 0px 10px #000000',
                   color: '#fff',
                   fontSize: 24,
+                  fontFamily: `"Bebas Neue", cursive`,
                   textAlign: 'center',
                   fontWeight: '500',
                   position: 'absolute',

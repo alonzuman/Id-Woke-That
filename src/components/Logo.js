@@ -6,7 +6,7 @@ export default function Logo({ fontSize = 24, color, ...rest }) {
     <Box {...rest}>
       <Typography
         style={{
-          fontFamily: 'monospace',
+          fontFamily: `'Bebas Neue', cursive`,
           fontSize,
           color
         }}
