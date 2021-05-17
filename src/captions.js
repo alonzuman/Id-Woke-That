@@ -41,5 +41,15 @@ export default [
   `Fight like a girl!`,
   `Make america think again.`,
   `Like, follow, subscribe`,
-  `Pussy grabs back.`
+  `Pussy grabs back.`,
+  `"You say you love your children above all else. And yet you are stealing their future in front of their very eyes." - Greta Thunberg`,
+  `"Act as if the house is on fire, because it is." - Greta Thunberg`,
+  `Every body is a beach body`,
+  `Love yourself.`,
+  `Be the change.`,
+  `Eat well be well`,
+  `Self love.`,
+  `Listen to your body`,
+  `I do it for me.`,
+  `LOVE TRUMPS HATE!`
 ]

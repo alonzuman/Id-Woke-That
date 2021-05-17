@@ -38,7 +38,7 @@ export default function ImageUploader() {
       incrementPosts()
     }
 
-  }, [state.caption, state.imageURL])
+  }, [state.caption, state.imageURL, incrementPosts])
 
   const wokeThat = () => {
     const cap = getWokeCaption()
@@ -60,6 +60,7 @@ export default function ImageUploader() {
         <Box height='100%' width='100%' maxWidth={512} position='relative'>
           {state.imageURL && (
             <img
+              alt='Selected wokeness'
               src={state.imageURL}
               style={{
                 objectFit: 'contain',
