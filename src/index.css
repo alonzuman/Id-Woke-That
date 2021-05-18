@@ -21,3 +21,7 @@ code {
 button {
   text-transform: none!important;
 }
+
+a {
+  color: inherit;
+}

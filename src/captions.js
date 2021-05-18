@@ -31,7 +31,7 @@ export default [
   `Women supporting women.`,
   `Stop the war.`,
   `Every day is earth day.`,
-  `Reuse. Reduce. Recycle.`,
+  `Reduce. Reuse. Recycle.`,
   `Go Green`,
   `Love animals, eat plants.`,
   `#forthekids`,
@@ -52,5 +52,12 @@ export default [
   `Listen to your body`,
   `I do it for me.`,
   `LOVE TRUMPS HATE!`,
-  `Skolstrejk för klimatet`
+  `Skolstrejk för klimatet`,
+  `Denial is not a policy.`,
+  `Dump trump.`,
+  `There is no planet B.`,
+  `100% vegan.`,
+  `Plant based.`,
+  `They/them/their.`,
+  `Ask me about pronounce.`
 ]
