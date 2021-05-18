@@ -2,7 +2,7 @@ import { Box, Chip, Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import usePostsCount from '../hooks/usePostsCount'
 
-export default function StatsBar() {
+export default function Footer() {
   const { posts } = usePostsCount()
 
   return (
