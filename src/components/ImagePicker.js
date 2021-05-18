@@ -4,7 +4,7 @@ import ImageIcon from '@material-ui/icons/Image';
 import useEditor from '../hooks/useEditor';
 import { useTheme } from '@material-ui/core';
 
-export default function ImagePicker() {
+export default function ImagePicker({ style }) {
   const { updateState, state } = useEditor()
   const inputRef = useRef(null)
   const { spacing } = useTheme()
@@ -13,7 +13,6 @@ export default function ImagePicker() {
     const file = e.target.files[0];
     const newImageURL = URL.createObjectURL(file)
 
-    // wokeThat()
     updateState({
       imageURL: newImageURL
     })
@@ -23,12 +22,12 @@ export default function ImagePicker() {
     <>
       <input type='file' style={{ display: 'none' }} onChange={handleChange} ref={inputRef} />
       <SecondaryButton
-        fullWidth
-        style={{ maxWidth: spacing(40) }}
-        startIcon={<ImageIcon size={24} />}
+        fullWidth={!state.imageURL}
+        style={{ maxWidth: spacing(40), ...style }}
         onClick={() => inputRef?.current?.click()}
       >
-        {state.imageURL ? 'Choose a different photo' : 'Upload a photo'}
+        <ImageIcon size={24} style={{ marginRight: state.imageURL ? 0 : spacing(1) }} />
+        {state.imageURL ? '' : 'Upload a photo'}
       </SecondaryButton>
     </>
   )
