@@ -35,23 +35,16 @@ export default function Editor() {
       <Header />
       <Box flex={1} width='100%' padding={2} display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
         <Post src={state.imageURL} caption={state.caption} />
-        <Box maxWidth={spacing(40)} padding={2} width='100%'>
+        <Box maxWidth={spacing(50)} pb={2} pt={2} width='100%'>
           <PrimaryButton
             fullWidth
+            onClick={updateCaption}
             style={{ marginBottom: spacing(1) }}
+            startIcon={<RefreshIcon size={24} />}
           >
-            Post
-          </PrimaryButton>
-          <Box display='flex' alignItems='center' justifyContent='space-between'>
-            <ImagePicker style={{ marginRight: spacing(1) }} />
-            <SecondaryButton
-              fullWidth
-              onClick={updateCaption}
-            >
-              <RefreshIcon size={24} style={{ marginRight: spacing(1) }} />
-              Woke That
-          </SecondaryButton>
-          </Box>
+            Woke That
+            </PrimaryButton>
+          <ImagePicker />
         </Box>
       </Box>
     </>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { db } from '../firebase'
 
-export default function usePostsCount() {
+export default function usePosts() {
   const [count, setCount] = useState(0)
 
   useEffect(() => {

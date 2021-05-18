@@ -23,11 +23,11 @@ export default function ImagePicker({ style }) {
       <input type='file' style={{ display: 'none' }} onChange={handleChange} ref={inputRef} />
       <SecondaryButton
         fullWidth={!state.imageURL}
-        style={{ maxWidth: spacing(40), ...style }}
         onClick={() => inputRef?.current?.click()}
+        startIcon={<ImageIcon size={24} />}
+        fullWidth
       >
-        <ImageIcon size={24} style={{ marginRight: state.imageURL ? 0 : spacing(1) }} />
-        {state.imageURL ? '' : 'Upload a photo'}
+        {state.imageURL ? 'Upload a different photo' : 'Upload a photo'}
       </SecondaryButton>
     </>
   )
